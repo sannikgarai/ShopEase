@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | AI ChatBot</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.chat-container{
+    width:450px;
+    max-width:95%;
+    height:700px;
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.chat-header{
+    background:#2563eb;
+    color:#fff;
+    padding:20px;
+    text-align:center;
+    font-size:22px;
+    font-weight:600;
+}
+
+.chat-box{
+    flex:1;
+    padding:20px;
+    overflow-y:auto;
+    background:#f5f7fb;
+}
+
+.message{
+    margin-bottom:15px;
+    display:flex;
+}
+
+.bot{
+    justify-content:flex-start;
+}
+
+.user{
+    justify-content:flex-end;
+}
+
+.bot span{
+    background:#e5e7eb;
+    padding:12px 15px;
+    border-radius:15px;
+    max-width:75%;
+}
+
+.user span{
+    background:#2563eb;
+    color:#fff;
+    padding:12px 15px;
+    border-radius:15px;
+    max-width:75%;
+}
+
+.input-area{
+    display:flex;
+    padding:15px;
+    border-top:1px solid #ddd;
+}
+
+.input-area input{
+    flex:1;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:10px;
+    outline:none;
+}
+
+.input-area button{
+    margin-left:10px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.input-area button:hover{
+    background:#1d4ed8;
+}
+
+.home-btn{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:#06b6d4;
+    color:white;
+    padding:12px;
+    font-weight:600;
+}
+
+.home-btn:hover{
+    background:#0891b2;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        🤖 ShopEase AI Assistant
+    </div>
+
+    <div class="chat-box" id="chatBox">
+
+        <div class="message bot">
+    <span>
+        👋 Hi! I'm your ShopEase AI Assistant.<br><br>
+        How can I help you today?
+    </span>
+</div>
+
+    </div>
+
+    <div class="input-area">
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Type your message...">
+
+        <button onclick="sendMessage()">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+
+    </div>
+
+    <a href="home.html" class="home-btn">
+        ← Back to Home
+    </a>
+
+</div>
+
+<script>
+
+function sendMessage(){
+
+    let input=document.getElementById("userInput");
+
+    let message=input.value.trim();
+
+    if(message==="") return;
+
+    let chat=document.getElementById("chatBox");
+
+    chat.innerHTML+=`
+    <div class="message user">
+        <span>${message}</span>
+    </div>
+    `;
+
+    let reply = "Sorry, I couldn't understand your question. Please ask about products, orders, delivery, payment, returns, offers, or support.";
+
+let msg = message.toLowerCase();
+
+// Greetings
+if (msg.includes("hi") || msg.includes("hello") || msg.includes("hey")) {
+    reply = "Hello! 👋 Welcome to ShopEase. How may I help you today?";
+}
+
+// Products
+else if (msg.includes("product") || msg.includes("products")) {
+    reply = "ShopEase offers Electronics, Fashion, Grocery, Shoes, Watches, Bags, Mobiles, Headphones, Fruits, Vegetables and much more.";
+}
+
+// Electronics
+else if (msg.includes("electronics") || msg.includes("laptop") || msg.includes("mobile") || msg.includes("phone")) {
+    reply = "Our Electronics section includes Gaming Laptops, Smartphones, Smart Watches, Wireless Headphones and Accessories.";
+}
+
+// Fashion
+else if (msg.includes("fashion") || msg.includes("shirt") || msg.includes("t-shirt") || msg.includes("shoe") || msg.includes("bag")) {
+    reply = "Fashion includes T-Shirts, Running Shoes, Travel Bags, Sunglasses and many stylish accessories.";
+}
+
+// Grocery
+else if (msg.includes("grocery") || msg.includes("fruit") || msg.includes("vegetable")) {
+    reply = "We provide fresh Fruits, Vegetables, Grocery Packs and daily essentials.";
+}
+
+// Watch
+else if (msg.includes("watch")) {
+    reply = "Smart Watches with fitness tracking and Bluetooth calling are available.";
+}
+
+// Headphones
+else if (msg.includes("headphone") || msg.includes("earphone")) {
+    reply = "Wireless Bluetooth Headphones with premium sound quality are available.";
+}
+
+// Cart
+else if (msg.includes("cart")) {
+    reply = "Go to the Cart page to view, update or remove products before checkout.";
+}
+
+// Checkout
+else if (msg.includes("checkout")) {
+    reply = "Click 'Proceed to Checkout' from your Cart page to place your order.";
+}
+
+// Order
+else if (msg.includes("order")) {
+    reply = "After placing your order, you will receive an order confirmation.";
+}
+
+// Track Order
+else if (msg.includes("track")) {
+    reply = "Order tracking will be available after your order is shipped.";
+}
+
+// Delivery
+else if (msg.includes("delivery") || msg.includes("shipping")) {
+    reply = "Standard delivery usually takes 3-7 business days across India.";
+}
+
+// Payment
+else if (msg.includes("payment")) {
+    reply = "We accept UPI, Credit Card, Debit Card, Net Banking and Cash on Delivery.";
+}
+
+// UPI
+else if (msg.includes("upi")) {
+    reply = "Yes, you can securely pay using any UPI application.";
+}
+
+// Cash on Delivery
+else if (msg.includes("cash") || msg.includes("cod")) {
+    reply = "Cash on Delivery is available for eligible locations.";
+}
+
+// Offers
+else if (msg.includes("offer") || msg.includes("discount") || msg.includes("sale")) {
+    reply = "Today's Special Offer: Up to 50% OFF on selected products.";
+}
+
+// Price
+else if (msg.includes("price") || msg.includes("cost")) {
+    reply = "The latest prices are displayed on each product page.";
+}
+
+// Return
+else if (msg.includes("return")) {
+    reply = "Most products can be returned within 7 days, subject to our return policy.";
+}
+
+// Refund
+else if (msg.includes("refund")) {
+    reply = "Refunds are processed within 5-7 business days after approval.";
+}
+
+// Cancel
+else if (msg.includes("cancel")) {
+    reply = "Orders can be cancelled before they are shipped.";
+}
+
+// Warranty
+else if (msg.includes("warranty")) {
+    reply = "Electronic products include the manufacturer's warranty where applicable.";
+}
+
+// Account
+else if (msg.includes("account") || msg.includes("login")) {
+    reply = "Use your registered username and password to log in.";
+}
+
+// Contact
+else if (msg.includes("contact") || msg.includes("support") || msg.includes("help")) {
+    reply = "Visit our Contact page for customer support.";
+}
+
+// About
+else if (msg.includes("about")) {
+    reply = "ShopEase is your trusted online shopping platform for quality products at affordable prices.";
+}
+
+// Location
+else if (msg.includes("location") || msg.includes("address")) {
+    reply = "We currently deliver to most locations across India.";
+}
+
+// Timing
+else if (msg.includes("time") || msg.includes("hours")) {
+    reply = "ShopEase is available 24 hours a day, 7 days a week.";
+}
+
+// Thank You
+else if (msg.includes("thank")) {
+    reply = "You're welcome! 😊 Happy Shopping at ShopEase.";
+}
+
+// Bye
+else if (msg.includes("bye") || msg.includes("goodbye")) {
+    reply = "Thank you for visiting ShopEase. Have a wonderful day! 👋";
+}
+
+    setTimeout(function(){
+
+        chat.innerHTML+=`
+        <div class="message bot">
+            <span>${reply}</span>
+        </div>
+        `;
+
+        chat.scrollTop=chat.scrollHeight;
+
+    },500);
+
+    input.value="";
+
+}
+
+document.getElementById("userInput").addEventListener("keypress",function(e){
+
+    if(e.key==="Enter"){
+
+        sendMessage();
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>

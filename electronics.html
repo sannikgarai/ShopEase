@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | Electronics</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        ShopEase
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="products.html">Products</a></li>
+
+        <li><a href="electronics.html" class="active">Electronics</a></li>
+
+        <li><a href="cart.html">Cart</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- Header -->
+
+<section class="page-header">
+
+    <h1>Electronics Collection</h1>
+
+    <p>Latest gadgets at the best prices.</p>
+
+</section>
+
+<!-- Electronics Products -->
+
+<section class="products">
+
+<div class="product-grid">
+
+    <!-- Laptop -->
+
+    <div class="product-card">
+
+        <img src="images/laptop.jpg" alt="Laptop">
+
+        <h3>Gaming Laptop</h3>
+
+        <p class="price">₹75,999</p>
+
+        <p>Intel Core i7 | 16GB RAM | 1TB SSD</p>
+
+        <button onclick="addToCart('Gaming Laptop',75999)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Mobile -->
+
+    <div class="product-card">
+
+        <img src="images/mobile.jpg" alt="Mobile">
+
+        <h3>5G Smartphone</h3>
+
+        <p class="price">₹24,999</p>
+
+        <p>8GB RAM | 256GB Storage | 108MP Camera</p>
+
+        <button onclick="addToCart('5G Smartphone',24999)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Smart Watch -->
+
+    <div class="product-card">
+
+        <img src="images/watch.jpg" alt="Watch">
+
+        <h3>Smart Watch</h3>
+
+        <p class="price">₹5,999</p>
+
+        <p>AMOLED Display | Heart Rate Monitor</p>
+
+        <button onclick="addToCart('Smart Watch',5999)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Headphones -->
+
+    <div class="product-card">
+
+        <img src="images/headphone.jpg" alt="Headphone">
+
+        <h3>Wireless Headphones</h3>
+
+        <p class="price">₹3,499</p>
+
+        <p>Noise Cancellation | Bluetooth 5.3</p>
+
+        <button onclick="addToCart('Wireless Headphones',3499)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Camera -->
+
+    <div class="product-card">
+
+        <img src="images/camera.jpg" alt="Camera">
+
+        <h3>DSLR Camera</h3>
+
+        <p class="price">₹48,999</p>
+
+        <p>24MP | 4K Video Recording</p>
+
+        <button onclick="addToCart('DSLR Camera',48999)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Speaker -->
+
+    <div class="product-card">
+
+        <img src="images/speaker.jpg" alt="Speaker">
+
+        <h3>Bluetooth Speaker</h3>
+
+        <p class="price">₹2,999</p>
+
+        <p>20W Sound | Waterproof</p>
+
+        <button onclick="addToCart('Bluetooth Speaker',2999)">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- Offer -->
+
+<section class="offer">
+
+    <h2>Special Electronics Offer</h2>
+
+    <p>
+        Get up to <strong>40% OFF</strong> on selected electronics.
+        Limited-time offer!
+    </p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <h3>ShopEase</h3>
+
+    <p>Your trusted online electronics store.</p>
+
+    <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

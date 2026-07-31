@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase | Grocery</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        ShopEase
+    </div>
+
+    <ul class="nav-links">
+
+        <li><a href="home.html">Home</a></li>
+
+        <li><a href="products.html">Products</a></li>
+
+        <li><a href="grocery.html" class="active">Grocery</a></li>
+
+        <li><a href="cart.html">Cart</a></li>
+
+        <li><a href="contact.html">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- Page Header -->
+
+<section class="page-header">
+
+    <h1>Fresh Grocery</h1>
+
+    <p>Fresh food delivered to your doorstep.</p>
+
+</section>
+
+<!-- Grocery Products -->
+
+<section class="products">
+
+<div class="product-grid">
+
+    <!-- Rice -->
+
+    <div class="product-card">
+
+        <img src="images/rice.jpg" alt="Rice">
+
+        <h3>Basmati Rice (5 Kg)</h3>
+
+        <p class="price">₹699</p>
+
+        <p>Premium Quality Rice</p>
+
+        <button onclick="addToCart('Basmati Rice',699)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Milk -->
+
+    <div class="product-card">
+
+        <img src="images/milk.jpg" alt="Milk">
+
+        <h3>Fresh Milk (1 L)</h3>
+
+        <p class="price">₹65</p>
+
+        <p>Pure & Healthy</p>
+
+        <button onclick="addToCart('Fresh Milk',65)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Bread -->
+
+    <div class="product-card">
+
+        <img src="images/bread.jpg" alt="Bread">
+
+        <h3>Brown Bread</h3>
+
+        <p class="price">₹45</p>
+
+        <p>Freshly Baked</p>
+
+        <button onclick="addToCart('Brown Bread',45)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Fruits -->
+
+    <div class="product-card">
+
+        <img src="images/fruits.jpg" alt="Fruits">
+
+        <h3>Fresh Fruits Pack</h3>
+
+        <p class="price">₹299</p>
+
+        <p>Healthy Mixed Fruits</p>
+
+        <button onclick="addToCart('Fresh Fruits',299)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Vegetables -->
+
+    <div class="product-card">
+
+        <img src="images/vegetables.jpg" alt="Vegetables">
+
+        <h3>Vegetable Basket</h3>
+
+        <p class="price">₹249</p>
+
+        <p>Farm Fresh Vegetables</p>
+
+        <button onclick="addToCart('Vegetable Basket',249)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Juice -->
+
+    <div class="product-card">
+
+        <img src="images/juice.jpg" alt="Juice">
+
+        <h3>Mixed Fruit Juice</h3>
+
+        <p class="price">₹120</p>
+
+        <p>500 ml Bottle</p>
+
+        <button onclick="addToCart('Fruit Juice',120)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Biscuits -->
+
+    <div class="product-card">
+
+        <img src="images/biscuit.jpg" alt="Biscuits">
+
+        <h3>Chocolate Biscuits</h3>
+
+        <p class="price">₹60</p>
+
+        <p>Crispy & Delicious</p>
+
+        <button onclick="addToCart('Chocolate Biscuits',60)">
+            Add to Cart
+        </button>
+
+    </div>
+
+    <!-- Cooking Oil -->
+
+    <div class="product-card">
+
+        <img src="images/oil.jpg" alt="Cooking Oil">
+
+        <h3>Sunflower Oil (1 L)</h3>
+
+        <p class="price">₹180</p>
+
+        <p>Refined Cooking Oil</p>
+
+        <button onclick="addToCart('Sunflower Oil',180)">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- Offer -->
+
+<section class="offer">
+
+    <h2>Special Grocery Offer</h2>
+
+    <p>
+        Buy grocery items worth <strong>₹999</strong> or more and get
+        <strong>Free Home Delivery</strong>.
+    </p>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+
+    <h3>ShopEase</h3>
+
+    <p>Fresh groceries at the best prices.</p>
+
+    <p>© 2026 ShopEase. All Rights Reserved.</p>
+
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
